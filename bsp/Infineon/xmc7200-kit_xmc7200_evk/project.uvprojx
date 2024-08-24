@@ -129,8 +129,8 @@
         </DebugOption>
         <Utilities>
           <Flash1>
-            <UseTargetDll>1</UseTargetDll>
-            <UseExternalTool>0</UseExternalTool>
+            <UseTargetDll>0</UseTargetDll>
+            <UseExternalTool>1</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>__STDC_LIMIT_MACROS, CY_SUPPORTS_DEVICE_VALIDATION, COMPONENT_MW_RETARGET_IO, XMC7200D_E272K8384, CY_TARGET_BOARD=APP_KIT_XMC72_EVK, COMPONENT_CM7, DEBUG, CORE_NAME_CM7_0=1, RT_USING_LIBC, CY_USING_HAL, RT_USING_ARMLIBC, COMPONENT_CAT1C, COMPONENT_MW_MTB_HAL_CAT1, COMPONENT_APP_KIT_XMC72_EVK, COMPONENT_MW_CAT1CM0P, COMPONENT_MW_MTB_PDL_CAT1, COMPONENT_CAT1C8M, COMPONENT_XMC7x_CM0P_SLEEP, TARGET_APP_KIT_XMC72_EVK, CYBSP_WIFI_WL_REG_ON_GPIO_DRIVE_MODE=CYHAL_GPIO_DRIVE_STRONG, COMPONENT_SOFTFP, __CLK_TCK=RT_TICK_PER_SECOND, COMPONENT_DebugCOMPONENT_GCC_ARM, COMPONENT_MW_CORE_LIB, COMPONENT_MW_RECIPE_MAKE_CAT1C, COMPONENT_MW_CORE_MAKE, COMPONENT_MW_CMSIS, COMPONENT_CM7_0, COMPONENT_CAT1, __RTTHREAD__</Define>
+              <Define>CY_SUPPORTS_DEVICE_VALIDATION, COMPONENT_CAT1C, COMPONENT_CAT1, CY_TARGET_BOARD=APP_KIT_XMC72_EVK, COMPONENT_MW_CORE_MAKE, COMPONENT_XMC7x_CM0P_SLEEP, __RTTHREAD__, COMPONENT_DebugCOMPONENT_GCC_ARM, COMPONENT_MW_RETARGET_IO, DEBUG, CY_USING_HAL, COMPONENT_MW_RECIPE_MAKE_CAT1C, COMPONENT_MW_CAT1CM0P, __STDC_LIMIT_MACROS, COMPONENT_CM7_0, CYBSP_WIFI_WL_REG_ON_GPIO_DRIVE_MODE=CYHAL_GPIO_DRIVE_STRONG, XMC7200D_E272K8384, COMPONENT_APP_KIT_XMC72_EVK, COMPONENT_MW_MTB_PDL_CAT1, COMPONENT_SOFTFP, COMPONENT_MW_MTB_HAL_CAT1, CORE_NAME_CM7_0=1, RT_USING_ARMLIBC, COMPONENT_MW_CORE_LIB, COMPONENT_CM7, TARGET_APP_KIT_XMC72_EVK, __CLK_TCK=RT_TICK_PER_SECOND, COMPONENT_CAT1C8M, RT_USING_LIBC, COMPONENT_MW_CMSIS</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\components\drivers\include;packages\Infineon_mtb-pdl-cat1-latest\devices\COMPONENT_CAT1C\include;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\libc\compilers\common\include;packages\Infineon_mtb-hal-cat1-latest\include_pvt;packages\Infineon_cat1cm0p-latest\COMPONENT_CAT1C;packages\Infineon_mtb-hal-cat1-latest\COMPONENT_CAT1C\include;libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource;packages\Infineon_cmsis-latest\Core\Include;packages\Infineon_core-lib-latest\include;board\ports;packages\Infineon_mtb-hal-cat1-latest\COMPONENT_CAT1C\include\triggers;.;..\libraries\HAL_Drivers;..\..\..\components\drivers\include;..\libraries\HAL_Drivers\config;packages\Infineon_mtb-hal-cat1-latest\include;..\..\..\include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\libcpu\arm\cortex-m7;..\..\..\components\finsh;packages\Infineon_mtb-pdl-cat1-latest\devices\COMPONENT_CAT1C\include\ip;packages\Infineon_mtb-hal-cat1-latest\COMPONENT_CAT1C\include\pin_packages;..\..\..\components\libc\posix\io\epoll;packages\Infineon_retarget-io-latest;..\..\..\components\drivers\include;packages\Infineon_mtb-pdl-cat1-latest\drivers\third_party\ethernet\include;..\..\..\components\libc\posix\io\poll;board;packages\Infineon_mtb-pdl-cat1-latest\drivers\include;..\..\..\components\libc\compilers\common\extension;..\..\..\components\drivers\include;..\..\..\libcpu\arm\common;applications;..\..\..\components\libc\posix\ipc;libs\TARGET_APP_KIT_XMC72_EVK</IncludePath>
+              <IncludePath>..\..\..\components\libc\compilers\common\include;packages\Infineon_retarget-io-latest;libs\TARGET_APP_KIT_XMC72_EVK;..\libraries\HAL_Drivers\config;packages\Infineon_cmsis-latest\Core\Include;..\..\..\components\drivers\include;packages\Infineon_mtb-hal-cat1-latest\include_pvt;..\..\..\components\libc\posix\ipc;..\libraries\HAL_Drivers;packages\Infineon_mtb-hal-cat1-latest\COMPONENT_CAT1C\include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\posix\io\epoll;..\..\..\components\drivers\include;packages\Infineon_core-lib-latest\include;..\..\..\components\libc\posix\io\eventfd;packages\Infineon_cat1cm0p-latest\COMPONENT_CAT1C;packages\Infineon_mtb-pdl-cat1-latest\devices\COMPONENT_CAT1C\include\ip;board\ports;..\..\..\include;..\..\..\libcpu\arm\common;..\..\..\components\drivers\include;packages\Infineon_mtb-pdl-cat1-latest\drivers\include;..\..\..\components\finsh;packages\Infineon_mtb-pdl-cat1-latest\drivers\third_party\ethernet\include;..\..\..\components\drivers\include;..\..\..\components\drivers\include;packages\Infineon_mtb-hal-cat1-latest\COMPONENT_CAT1C\include\pin_packages;..\..\..\components\libc\posix\io\poll;..\..\..\components\libc\compilers\common\extension;packages\Infineon_mtb-pdl-cat1-latest\devices\COMPONENT_CAT1C\include;libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource;..\..\..\libcpu\arm\cortex-m7;packages\Infineon_mtb-hal-cat1-latest\COMPONENT_CAT1C\include\triggers;board;.;applications;packages\Infineon_mtb-hal-cat1-latest\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -439,6 +439,62 @@
         <Group>
           <GroupName>DeviceDrivers</GroupName>
           <Files>
+            <File>
+              <FileName>can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\drivers\can\can.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>0</PublicsOnly>
+                  <StopOnExitCode>3</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls> </MiscControls>
+                      <Define>__RT_IPC_SOURCE__</Define>
+                      <Undefine> </Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
             <File>
               <FileName>device.c</FileName>
               <FileType>1</FileType>
@@ -2318,34 +2374,9 @@
           <GroupName>libs</GroupName>
           <Files>
             <File>
-              <FileName>cycfg.c</FileName>
+              <FileName>cycfg_pins.c</FileName>
               <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg.c</FilePath>
-            </File>
-            <File>
-              <FileName>cycfg_qspi_memslot.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_qspi_memslot.c</FilePath>
-            </File>
-            <File>
-              <FileName>cycfg_system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_system.c</FilePath>
-            </File>
-            <File>
-              <FileName>cycfg_clocks.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_clocks.c</FilePath>
-            </File>
-            <File>
-              <FileName>cycfg_peripherals.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_peripherals.c</FilePath>
-            </File>
-            <File>
-              <FileName>cybsp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\cybsp.c</FilePath>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_pins.c</FilePath>
             </File>
             <File>
               <FileName>system_cm7.c</FileName>
@@ -2353,14 +2384,39 @@
               <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\COMPONENT_CM7\system_cm7.c</FilePath>
             </File>
             <File>
-              <FileName>cycfg_pins.c</FileName>
+              <FileName>cycfg_peripherals.c</FileName>
               <FileType>1</FileType>
-              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_pins.c</FilePath>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_peripherals.c</FilePath>
+            </File>
+            <File>
+              <FileName>cycfg_clocks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_clocks.c</FilePath>
+            </File>
+            <File>
+              <FileName>cybsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\cybsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>cycfg_qspi_memslot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_qspi_memslot.c</FilePath>
             </File>
             <File>
               <FileName>startup_cm7.c</FileName>
               <FileType>1</FileType>
               <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\COMPONENT_CM7\startup_cm7.c</FilePath>
+            </File>
+            <File>
+              <FileName>cycfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>cycfg_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libs\TARGET_APP_KIT_XMC72_EVK\config\GeneratedSource\cycfg_system.c</FilePath>
             </File>
           </Files>
         </Group>
