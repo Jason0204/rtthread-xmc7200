@@ -45,9 +45,46 @@
 extern "C" {
 #endif /* defined(__cplusplus) */
 
+#define CYBSP_CAN_TX_ENABLED 1U
+#define CYBSP_CAN_TX_PORT GPIO_PRT0
+#define CYBSP_CAN_TX_PORT_NUM 0U
+#define CYBSP_CAN_TX_PIN 2U
+#define CYBSP_CAN_TX_NUM 2U
+#define CYBSP_CAN_TX_DRIVEMODE CY_GPIO_DM_STRONG
+#define CYBSP_CAN_TX_INIT_DRIVESTATE 1
+#ifndef ioss_0_port_0_pin_2_HSIOM
+    #define ioss_0_port_0_pin_2_HSIOM HSIOM_SEL_GPIO
+#endif
+#define CYBSP_CAN_TX_HSIOM ioss_0_port_0_pin_2_HSIOM
+#define CYBSP_CAN_TX_IRQ ioss_interrupts_gpio_0_IRQn
+
 #if defined (CY_USING_HAL)
-#define CYBSP_CAN_TX (P0_2)
-#define CYBSP_CAN_RX (P0_3)
+#define CYBSP_CAN_TX_HAL_PORT_PIN P0_2
+#define CYBSP_CAN_TX P0_2
+#define CYBSP_CAN_TX_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+#define CYBSP_CAN_TX_HAL_DIR CYHAL_GPIO_DIR_BIDIRECTIONAL 
+#define CYBSP_CAN_TX_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
+#endif /* defined (CY_USING_HAL) */
+
+#define CYBSP_CAN_RX_ENABLED 1U
+#define CYBSP_CAN_RX_PORT GPIO_PRT0
+#define CYBSP_CAN_RX_PORT_NUM 0U
+#define CYBSP_CAN_RX_PIN 3U
+#define CYBSP_CAN_RX_NUM 3U
+#define CYBSP_CAN_RX_DRIVEMODE CY_GPIO_DM_HIGHZ
+#define CYBSP_CAN_RX_INIT_DRIVESTATE 1
+#ifndef ioss_0_port_0_pin_3_HSIOM
+    #define ioss_0_port_0_pin_3_HSIOM HSIOM_SEL_GPIO
+#endif
+#define CYBSP_CAN_RX_HSIOM ioss_0_port_0_pin_3_HSIOM
+#define CYBSP_CAN_RX_IRQ ioss_interrupts_gpio_0_IRQn
+
+#if defined (CY_USING_HAL)
+#define CYBSP_CAN_RX_HAL_PORT_PIN P0_3
+#define CYBSP_CAN_RX P0_3
+#define CYBSP_CAN_RX_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+#define CYBSP_CAN_RX_HAL_DIR CYHAL_GPIO_DIR_INPUT 
+#define CYBSP_CAN_RX_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_NONE
 #define CYBSP_SPI_MISO (P10_0)
 #define CYBSP_D12 CYBSP_SPI_MISO
 #define CYBSP_SPI_MOSI (P10_1)
@@ -97,6 +134,29 @@ extern "C" {
 #define LED3 CYBSP_USER_LED3
 #define CYBSP_USER_BTN2 (P17_3)
 #endif /* defined (CY_USING_HAL) */
+
+#define CANFD_STB_ENABLED 1U
+#define CANFD_STB_PORT GPIO_PRT1
+#define CANFD_STB_PORT_NUM 1U
+#define CANFD_STB_PIN 0U
+#define CANFD_STB_NUM 0U
+#define CANFD_STB_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
+#define CANFD_STB_INIT_DRIVESTATE 0
+#ifndef ioss_0_port_1_pin_0_HSIOM
+    #define ioss_0_port_1_pin_0_HSIOM HSIOM_SEL_GPIO
+#endif
+#define CANFD_STB_HSIOM ioss_0_port_1_pin_0_HSIOM
+#define CANFD_STB_IRQ ioss_interrupts_gpio_1_IRQn
+
+#if defined (CY_USING_HAL)
+#define CANFD_STB_HAL_PORT_PIN P1_0
+#define CANFD_STB P1_0
+#define CANFD_STB_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+#define CANFD_STB_HAL_DIR CYHAL_GPIO_DIR_OUTPUT 
+#define CANFD_STB_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
+#endif /* defined (CY_USING_HAL) */
+
+
 
 #define CYBSP_WCO_IN_ENABLED 1U
 #define CYBSP_WCO_IN_PORT GPIO_PRT21
@@ -273,6 +333,27 @@ extern "C" {
 #define CYBSP_QSPI_D1 (P7_2)
 #define CYBSP_QSPI_D2 (P7_3)
 #define CYBSP_QSPI_D3 (P7_4)
+#endif /* defined (CY_USING_HAL) */
+
+extern const cy_stc_gpio_pin_config_t CYBSP_CAN_TX_config;
+
+#if defined (CY_USING_HAL)
+extern const cyhal_resource_inst_t CYBSP_CAN_TX_obj;
+#endif /* defined (CY_USING_HAL) */
+
+extern const cy_stc_gpio_pin_config_t CYBSP_CAN_RX_config;
+
+#if defined (CY_USING_HAL)
+extern const cyhal_resource_inst_t CYBSP_CAN_RX_obj;
+#endif /* defined (CY_USING_HAL) */
+
+
+
+
+extern const cy_stc_gpio_pin_config_t CANFD_STB_config;
+
+#if defined (CY_USING_HAL)
+extern const cyhal_resource_inst_t CANFD_STB_obj;
 #endif /* defined (CY_USING_HAL) */
 
 extern const cy_stc_gpio_pin_config_t CYBSP_WCO_IN_config;

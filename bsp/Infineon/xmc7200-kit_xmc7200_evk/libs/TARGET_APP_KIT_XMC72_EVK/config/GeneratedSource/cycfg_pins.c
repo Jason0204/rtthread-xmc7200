@@ -28,6 +28,86 @@
 
 #include "cycfg_pins.h"
 
+const cy_stc_gpio_pin_config_t CYBSP_CAN_TX_config =
+{
+    .outVal = 1,
+    .driveMode = CY_GPIO_DM_STRONG,
+    .hsiom = CYBSP_CAN_TX_HSIOM,
+    .intEdge = CY_GPIO_INTR_DISABLE,
+    .intMask = 0UL,
+    .vtrip = CY_GPIO_VTRIP_CMOS,
+    .slewRate = CY_GPIO_SLEW_FAST,
+    .driveSel = CY_GPIO_DRIVE_1_2,
+    .vregEn = 0UL,
+    .ibufMode = 0UL,
+    .vtripSel = 0UL,
+    .vrefSel = 0UL,
+    .vohSel = 0UL,
+};
+
+#if defined (CY_USING_HAL)
+const cyhal_resource_inst_t CYBSP_CAN_TX_obj =
+{
+    .type = CYHAL_RSC_GPIO,
+    .block_num = CYBSP_CAN_TX_PORT_NUM,
+    .channel_num = CYBSP_CAN_TX_PIN,
+};
+#endif /* defined (CY_USING_HAL) */
+
+const cy_stc_gpio_pin_config_t CYBSP_CAN_RX_config =
+{
+    .outVal = 1,
+    .driveMode = CY_GPIO_DM_HIGHZ,
+    .hsiom = CYBSP_CAN_RX_HSIOM,
+    .intEdge = CY_GPIO_INTR_DISABLE,
+    .intMask = 0UL,
+    .vtrip = CY_GPIO_VTRIP_CMOS,
+    .slewRate = CY_GPIO_SLEW_FAST,
+    .driveSel = CY_GPIO_DRIVE_1_2,
+    .vregEn = 0UL,
+    .ibufMode = 0UL,
+    .vtripSel = 0UL,
+    .vrefSel = 0UL,
+    .vohSel = 0UL,
+};
+
+#if defined (CY_USING_HAL)
+const cyhal_resource_inst_t CYBSP_CAN_RX_obj =
+{
+    .type = CYHAL_RSC_GPIO,
+    .block_num = CYBSP_CAN_RX_PORT_NUM,
+    .channel_num = CYBSP_CAN_RX_PIN,
+};
+#endif /* defined (CY_USING_HAL) */
+
+const cy_stc_gpio_pin_config_t CANFD_STB_config =
+{
+    .outVal = 0,
+    .driveMode = CY_GPIO_DM_STRONG_IN_OFF,
+    .hsiom = CANFD_STB_HSIOM,
+    .intEdge = CY_GPIO_INTR_DISABLE,
+    .intMask = 0UL,
+    .vtrip = CY_GPIO_VTRIP_CMOS,
+    .slewRate = CY_GPIO_SLEW_FAST,
+    .driveSel = CY_GPIO_DRIVE_1_2,
+    .vregEn = 0UL,
+    .ibufMode = 0UL,
+    .vtripSel = 0UL,
+    .vrefSel = 0UL,
+    .vohSel = 0UL,
+};
+
+#if defined (CY_USING_HAL)
+const cyhal_resource_inst_t CANFD_STB_obj =
+{
+    .type = CYHAL_RSC_GPIO,
+    .block_num = CANFD_STB_PORT_NUM,
+    .channel_num = CANFD_STB_PIN,
+};
+#endif /* defined (CY_USING_HAL) */
+
+
+
 const cy_stc_gpio_pin_config_t CYBSP_WCO_IN_config =
 {
     .outVal = 1,
@@ -212,6 +292,10 @@ const cyhal_resource_inst_t CYBSP_SWDIO_obj =
 
 void init_cycfg_pins(void)
 {
+    Cy_GPIO_Pin_Init(CYBSP_CAN_TX_PORT, CYBSP_CAN_TX_PIN, &CYBSP_CAN_TX_config);
+    Cy_GPIO_Pin_Init(CYBSP_CAN_RX_PORT, CYBSP_CAN_RX_PIN, &CYBSP_CAN_RX_config);
+    Cy_GPIO_Pin_Init(CANFD_STB_PORT, CANFD_STB_PIN, &CANFD_STB_config);
+    
     Cy_GPIO_Pin_Init(CYBSP_SWO_PORT, CYBSP_SWO_PIN, &CYBSP_SWO_config);
     Cy_GPIO_Pin_Init(CYBSP_SWDCK_PORT, CYBSP_SWDCK_PIN, &CYBSP_SWDCK_config);
     Cy_GPIO_Pin_Init(CYBSP_SWDIO_PORT, CYBSP_SWDIO_PIN, &CYBSP_SWDIO_config);
@@ -219,6 +303,10 @@ void init_cycfg_pins(void)
 void reserve_cycfg_pins(void)
 {
 #if defined (CY_USING_HAL)
+    cyhal_hwmgr_reserve(&CYBSP_CAN_TX_obj);
+    cyhal_hwmgr_reserve(&CYBSP_CAN_RX_obj);
+    cyhal_hwmgr_reserve(&CANFD_STB_obj);
+    
     cyhal_hwmgr_reserve(&CYBSP_WCO_IN_obj);
     cyhal_hwmgr_reserve(&CYBSP_WCO_OUT_obj);
     cyhal_hwmgr_reserve(&CYBSP_ECO_IN_obj);
