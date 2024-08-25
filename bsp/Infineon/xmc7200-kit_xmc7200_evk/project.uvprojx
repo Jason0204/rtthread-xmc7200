@@ -389,6 +389,11 @@
               <FileType>1</FileType>
               <FilePath>applications\main.c</FilePath>
             </File>
+            <File>
+              <FileName>canfd_driver_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\canfd_driver_test.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1196,6 +1201,11 @@
               <FileName>drv_uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\libraries\HAL_Drivers\drv_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\HAL_Drivers\drv_can.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2367,6 +2377,11 @@
               <FileName>cy_retarget_io.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\Infineon_retarget-io-latest\cy_retarget_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>cy_canfd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\packages\Infineon_mtb-pdl-cat1-latest\drivers\source\cy_canfd.c</FilePath>
             </File>
           </Files>
         </Group>
