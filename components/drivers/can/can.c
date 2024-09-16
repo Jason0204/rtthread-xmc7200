@@ -137,15 +137,16 @@ rt_inline int _can_int_tx(struct rt_can_device *can, const struct rt_can_msg *da
     size = msgs;
     tx_fifo = (struct rt_can_tx_fifo *) can->can_tx;
     RT_ASSERT(tx_fifo != RT_NULL);
-
+rt_kprintf("_can_int_tx is called\r\n");
     while (msgs)
     {
         rt_base_t level;
         rt_uint32_t no;
         rt_uint32_t result;
         struct rt_can_sndbxinx_list *tx_tosnd = RT_NULL;
-
+rt_kprintf("_can_int_tx is called--1\r\n");
         rt_sem_take(&(tx_fifo->sem), RT_WAITING_FOREVER);
+        rt_kprintf("_can_int_tx is called--2\r\n");
         level = rt_hw_interrupt_disable();
         tx_tosnd = rt_list_entry(tx_fifo->freelist.next, struct rt_can_sndbxinx_list, list);
         RT_ASSERT(tx_tosnd != RT_NULL);
@@ -467,14 +468,18 @@ static rt_ssize_t rt_can_write(struct rt_device *dev,
                               rt_size_t         size)
 {
     struct rt_can_device *can;
-
+rt_kprintf("rt_can_write is called--1\r\n");
     RT_ASSERT(dev != RT_NULL);
     if (size == 0) return 0;
+    rt_kprintf("rt_can_write is called--2\r\n");
 
     can = (struct rt_can_device *)dev;
 
+    rt_kprintf("rt_can_write is called--dev->ref_count: %d\r\n", dev->ref_count);
+    rt_kprintf("rt_can_write is called--dev->open_flag: 0x%x\r\n", dev->open_flag);
     if ((dev->open_flag & RT_DEVICE_FLAG_INT_TX) && (dev->ref_count > 0))
     {
+        rt_kprintf("rt_can_write is called--3\r\n");
         if (can->config.privmode)
         {
             return _can_int_tx_priv(can, buffer, size);

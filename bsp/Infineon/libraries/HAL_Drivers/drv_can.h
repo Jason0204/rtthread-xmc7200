@@ -21,14 +21,20 @@ extern "C" {
 #include "cy_canfd.h"
 
 
-
 /* xmc7200 can device */
 struct xmc_canfd
 {
     char *name;
-    cy_stc_canfd_config_t canfd_conf;
+    cy_stc_canfd_config_t *conf;
     struct rt_can_device device;    /* inherit from can device */
 };
+
+//struct xmc_bitrate
+//{
+//    uint32_t u32_bitrate;
+//    cy_stc_canfd_bitrate_t 
+//};
+
 
 int rt_hw_can_init(void);
 

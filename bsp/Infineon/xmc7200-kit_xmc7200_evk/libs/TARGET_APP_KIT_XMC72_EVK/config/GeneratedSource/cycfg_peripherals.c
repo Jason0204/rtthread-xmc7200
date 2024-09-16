@@ -5,8 +5,8 @@
  * Peripheral Hardware Block configuration
  * This file was automatically generated and should not be modified.
  * Configurator Backend 3.20.0
- * device-db 4.15.0.5746
- * mtb-pdl-cat1 3.10.0.32115
+ * device-db 4.17.0.6514
+ * mtb-pdl-cat1 3.11.1.35176
  *
  *******************************************************************************
  * Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
@@ -41,17 +41,18 @@
     .f1_f = &CANFD_extIdFilterF1Config_0, \
  }
 
+void canfd_tx_callback(void);
 void canfd_rx_callback(bool rxFIFOMsg, uint8_t msgBufOrRxFIFONum, cy_stc_canfd_rx_buffer_t* basemsg);
 cy_stc_canfd_bitrate_t CANFD_nominalBitrateConfig =
 {
-    .prescaler = 10U - 1U,
-    .timeSegment1 = 5U - 1U,
-    .timeSegment2 = 2U - 1U,
+    .prescaler = 1U - 1U,
+    .timeSegment1 = 27U - 1U,
+    .timeSegment2 = 4U - 1U,
     .syncJumpWidth = 2U - 1U,
 };
 cy_stc_canfd_bitrate_t CANFD_dataBitrateConfig =
 {
-    .prescaler = 5U - 1U,
+    .prescaler = 2U - 1U,
     .timeSegment1 = 5U - 1U,
     .timeSegment2 = 2U - 1U,
     .syncJumpWidth = 2U - 1U,
@@ -126,7 +127,7 @@ cy_en_canfd_fifo_config_t CANFD_rxFifo1Config =
 };
 cy_stc_canfd_config_t CANFD_config =
 {
-    .txCallback = NULL,
+    .txCallback = canfd_tx_callback,
     .rxCallback = canfd_rx_callback,
     .errorCallback = NULL,
     .canFDMode = true,
@@ -183,6 +184,10 @@ const cyhal_resource_inst_t CANFD_obj =
 };
 #endif /* defined (CY_USING_HAL) */
 
+__WEAK void canfd_tx_callback(void)
+{
+    
+}
 __WEAK void canfd_rx_callback(bool rxFIFOMsg, uint8_t msgBufOrRxFIFONum, cy_stc_canfd_rx_buffer_t* basemsg)
 {
     (void)rxFIFOMsg;
@@ -194,7 +199,7 @@ void init_cycfg_peripherals(void)
 #if defined (CY_DEVICE_CONFIGURATOR_IP_ENABLE_FEATURE)
     Cy_SysClk_PeriGroupSlaveInit(CY_MMIO_CANFD0_PERI_NR , CY_MMIO_CANFD0_GROUP_NR, CY_MMIO_CANFD0_SLAVE_NR, CY_MMIO_CANFD0_CLK_HF_NR);
 #endif /* defined (CY_DEVICE_CONFIGURATOR_IP_ENABLE_FEATURE) */
-    Cy_SysClk_PeriPclkAssignDivider(PCLK_CANFD0_CLOCK_CAN1, CY_SYSCLK_DIV_16_BIT, 0U);
+    Cy_SysClk_PeriPclkAssignDivider(PCLK_CANFD0_CLOCK_CAN1, CY_SYSCLK_DIV_24_5_BIT, 0U);
 }
 void reserve_cycfg_peripherals(void)
 {

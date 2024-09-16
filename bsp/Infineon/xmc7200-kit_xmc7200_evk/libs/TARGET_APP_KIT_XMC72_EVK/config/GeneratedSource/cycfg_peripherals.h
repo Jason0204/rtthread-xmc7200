@@ -5,8 +5,8 @@
  * Peripheral Hardware Block configuration
  * This file was automatically generated and should not be modified.
  * Configurator Backend 3.20.0
- * device-db 4.15.0.5746
- * mtb-pdl-cat1 3.10.0.32115
+ * device-db 4.17.0.6514
+ * mtb-pdl-cat1 3.11.1.35176
  *
  *******************************************************************************
  * Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
@@ -65,6 +65,7 @@ extern "C" {
 #define CANFD_IRQ_0 canfd_0_interrupts0_1_IRQn
 #define CANFD_IRQ_1 canfd_0_interrupts1_1_IRQn
 
+extern void canfd_tx_callback(void);
 extern void canfd_rx_callback(bool rxFIFOMsg, uint8_t msgBufOrRxFIFONum, cy_stc_canfd_rx_buffer_t* basemsg);
 extern cy_stc_canfd_bitrate_t CANFD_nominalBitrateConfig;
 extern cy_stc_canfd_bitrate_t CANFD_dataBitrateConfig;

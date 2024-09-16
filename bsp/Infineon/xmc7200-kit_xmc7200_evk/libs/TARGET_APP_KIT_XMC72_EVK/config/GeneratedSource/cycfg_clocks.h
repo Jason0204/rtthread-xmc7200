@@ -5,8 +5,8 @@
  * Clock configuration
  * This file was automatically generated and should not be modified.
  * Configurator Backend 3.20.0
- * device-db 4.15.0.5746
- * mtb-pdl-cat1 3.10.0.32115
+ * device-db 4.17.0.6514
+ * mtb-pdl-cat1 3.11.1.35176
  *
  *******************************************************************************
  * Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
@@ -40,34 +40,34 @@
 extern "C" {
 #endif /* defined(__cplusplus) */
 
-#define CYBSP_TRACE_CLK_DIV_ENABLED 1U
+#define peri_0_group_0_div_16_2_ENABLED 1U
 
 #if defined (CY_USING_HAL) || defined (CY_USING_HAL_LITE)
-#define CYBSP_TRACE_CLK_DIV_HW CYHAL_CLOCK_BLOCK_PERIPHERAL0_8BIT
+#define peri_0_group_0_div_16_2_HW CYHAL_CLOCK_BLOCK_PERIPHERAL0_16BIT
 #endif /* defined (CY_USING_HAL) || defined (CY_USING_HAL_LITE) */
 
 #if !defined (CY_USING_HAL) && !defined (CY_USING_HAL_LITE)
-#define CYBSP_TRACE_CLK_DIV_HW CY_SYSCLK_DIV_8_BIT
+#define peri_0_group_0_div_16_2_HW CY_SYSCLK_DIV_16_BIT
 #endif /* !defined (CY_USING_HAL) && !defined (CY_USING_HAL_LITE) */
 
-#define CYBSP_TRACE_CLK_DIV_NUM 3U
-#define CYBSP_TRACE_CLK_DIV_GRP_NUM ((0U << PERI_PCLK_GR_NUM_Pos) | (0U << PERI_PCLK_INST_NUM_Pos))
-#define peri_0_group_1_div_8_0_ENABLED 1U
+#define peri_0_group_0_div_16_2_NUM 2U
+#define PERI_0_GROUP_0_DIV_16_2_GRP_NUM ((0U << PERI_PCLK_GR_NUM_Pos) | (0U << PERI_PCLK_INST_NUM_Pos))
+#define peri_0_group_1_div_24_5_0_ENABLED 1U
 
 #if defined (CY_USING_HAL) || defined (CY_USING_HAL_LITE)
-#define peri_0_group_1_div_8_0_HW CYHAL_CLOCK_BLOCK_PERIPHERAL1_8BIT
+#define peri_0_group_1_div_24_5_0_HW CYHAL_CLOCK_BLOCK_PERIPHERAL1_24_5BIT
 #endif /* defined (CY_USING_HAL) || defined (CY_USING_HAL_LITE) */
 
 #if !defined (CY_USING_HAL) && !defined (CY_USING_HAL_LITE)
-#define peri_0_group_1_div_8_0_HW CY_SYSCLK_DIV_8_BIT
+#define peri_0_group_1_div_24_5_0_HW CY_SYSCLK_DIV_24_5_BIT
 #endif /* !defined (CY_USING_HAL) && !defined (CY_USING_HAL_LITE) */
 
-#define peri_0_group_1_div_8_0_NUM 0U
-#define PERI_0_GROUP_1_DIV_8_0_GRP_NUM ((1U << PERI_PCLK_GR_NUM_Pos) | (0U << PERI_PCLK_INST_NUM_Pos))
+#define peri_0_group_1_div_24_5_0_NUM 0U
+#define PERI_0_GROUP_1_DIV_24_5_0_GRP_NUM ((1U << PERI_PCLK_GR_NUM_Pos) | (0U << PERI_PCLK_INST_NUM_Pos))
 
 #if defined (CY_USING_HAL)
-extern const cyhal_resource_inst_t CYBSP_TRACE_CLK_DIV_obj;
-extern const cyhal_resource_inst_t peri_0_group_1_div_8_0_obj;
+extern const cyhal_resource_inst_t peri_0_group_0_div_16_2_obj;
+extern const cyhal_resource_inst_t peri_0_group_1_div_24_5_0_obj;
 #endif /* defined (CY_USING_HAL) */
 
 void init_cycfg_clocks(void);

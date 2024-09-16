@@ -119,13 +119,28 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>ARMRTXEVENTFLAGS</Key>
+          <Name>-L70 -Z18 -C0 -M0 -T1</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGTARM</Key>
+          <Name>(1010=-1,-1,-1,-1,0)(6017=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(6016=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ARMDBGFLAGS</Key>
+          <Name></Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
           <Name>UL2CM3(-S0 -C0 -P0 )  -FN5 -FCFFF0 -FD28001000 -FF0CAT1C_8384 -FF1CAT1C_WFLASH_256 -FF2CAT1C_SFLASH_USER -FF3CAT1C_SFLASH_PKEY -FF4CAT1C_SFLASH_TOC2 -FL0830000 -FL140000 -FL2800 -FL3C00 -FL4200 -FS010000000 -FS114000000 -FS217000800 -FS317006400 -FS417007C00 -FP0($$Device:XMC7200D-E272K8384$Flash\CAT1C_8384.FLM) -FP1($$Device:XMC7200D-E272K8384$Flash\CAT1C_WFLASH_256.FLM) -FP2($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_USER.FLM) -FP3($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_PKEY.FLM) -FP4($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_TOC2.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>CMSIS_AGDI</Key>
-          <Name>-X"Any" -UAny -O974 -S10 -C0 -P00000002 -N00("ARM CoreSight SW-DP") -D00(6BA02477) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO23 -FD28001000 -FCFFF0 -FN5 -FF0CAT1C_8384.FLM -FS010000000 -FL0830000 -FP0($$Device:XMC7200D-E272K8384$Flash\CAT1C_8384.FLM) -FF1CAT1C_WFLASH_256.FLM -FS114000000 -FL140000 -FP1($$Device:XMC7200D-E272K8384$Flash\CAT1C_WFLASH_256.FLM) -FF2CAT1C_SFLASH_USER.FLM -FS217000800 -FL2800 -FP2($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_USER.FLM) -FF3CAT1C_SFLASH_PKEY.FLM -FS317006400 -FL3C00 -FP3($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_PKEY.FLM) -FF4CAT1C_SFLASH_TOC2.FLM -FS417007C00 -FL4200 -FP4($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_TOC2.FLM)</Name>
+          <Name>-X"Any" -UAny -O974 -S10 -C0 -P00000002 -N00("") -D00(00000000) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO23 -FD28001000 -FCFFF0 -FN5 -FF0CAT1C_8384.FLM -FS010000000 -FL0830000 -FP0($$Device:XMC7200D-E272K8384$Flash\CAT1C_8384.FLM) -FF1CAT1C_WFLASH_256.FLM -FS114000000 -FL140000 -FP1($$Device:XMC7200D-E272K8384$Flash\CAT1C_WFLASH_256.FLM) -FF2CAT1C_SFLASH_USER.FLM -FS217000800 -FL2800 -FP2($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_USER.FLM) -FF3CAT1C_SFLASH_PKEY.FLM -FS317006400 -FL3C00 -FP3($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_PKEY.FLM) -FF4CAT1C_SFLASH_TOC2.FLM -FS417007C00 -FL4200 -FP4($$Device:XMC7200D-E272K8384$Flash\CAT1C_SFLASH_TOC2.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
@@ -140,7 +155,7 @@
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>0</viewmode>
+        <viewmode>1</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
         <aTbox>0</aTbox>
@@ -319,7 +334,7 @@
 
   <Group>
     <GroupName>DeviceDrivers</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1411,7 +1426,7 @@
 
   <Group>
     <GroupName>libs</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

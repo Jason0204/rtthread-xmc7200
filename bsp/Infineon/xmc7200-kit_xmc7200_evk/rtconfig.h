@@ -93,7 +93,7 @@
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_CAN
-#define RT_CAN_USING_HDR
+//#define RT_CAN_USING_HDR
 #define RT_CAN_USING_CANFD
 #define RT_USING_PIN
 /* end of Device Drivers */
@@ -350,6 +350,7 @@
 #define BSP_USING_UART
 #define BSP_USING_UART3
 #define UART_CPU_IRQ_Number 3
+#define BSP_USING_CANFD0
 /* end of On-chip Peripheral Drivers */
 /* end of Hardware Drivers Config */
 
