@@ -1,7 +1,7 @@
 <p align="center">
 <img src="documentation/figures/logo.png" width="60%" >
 </p>
-[English](README.md) | **中文** | [Español](README_es.md) | [Deutsch](README_de.md)
+[English](README.md) | **中文** 
 
 ## 简介
 

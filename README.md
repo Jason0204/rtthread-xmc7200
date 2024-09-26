@@ -2,7 +2,7 @@
 <img src="documentation/figures/logo.png" width="60%" >
 </p>
 
-**English** | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md)
+**English** | [中文](README_zh.md)
 
 [![GitHubStars](https://img.shields.io/github/stars/RT-Thread/rt-thread?style=flat-square&logo=GitHub)](https://github.com/RT-Thread/rt-thread/stargazers)
 [![GiteeStars](https://gitee.com/rtthread/rt-thread/badge/star.svg?theme=gvp)](https://gitee.com/rtthread/rt-thread/stargazers)
@@ -123,6 +123,10 @@ Based on [STM32F103 BluePill](https://github.com/RT-Thread/rt-thread/tree/master
 
 RT-Thread BSP can be compiled directly and downloaded to the corresponding development board for use. In addition, RT-Thread also provides qemu-vexpress-a9 BSP, which can be used without hardware platform. See the getting started guide below for details. Getting Started of QEMU with Env:
 [Windows](documentation/quick-start/quick_start_qemu/quick_start_qemu.md) | [Linux Ubuntu](documentation/quick-start/quick_start_qemu/quick_start_qemu_linux.md) | [Mac OS](documentation/quick-start/quick_start_qemu/quick_start_qemu_macos.md)
+
+## about jasontek CAN example for XMC7200EVK
+
+[rtthread-xmc7200/bsp/Infineon/xmc7200-kit_xmc7200_evk at jasontek_xmc7200 · Jason0204/rtthread-xmc7200 (github.com)](https://github.com/Jason0204/rtthread-xmc7200/tree/jasontek_xmc7200/bsp/Infineon/xmc7200-kit_xmc7200_evk)
 
 # License
 
