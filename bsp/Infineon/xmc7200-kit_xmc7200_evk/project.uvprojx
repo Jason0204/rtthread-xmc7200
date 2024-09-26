@@ -394,6 +394,11 @@
               <FileType>1</FileType>
               <FilePath>.\applications\canfd_driver_test.c</FilePath>
             </File>
+            <File>
+              <FileName>can_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\can_test.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
